@@ -10,10 +10,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.ivln.weather.R;
+import com.example.ivln.weather.ui.main.ViewModel.MainViewModel;
 
 public class MapFragment extends Fragment {
 
-    private MapViewModel mViewModel;
+    private MainViewModel viewModel;
 
     public static MapFragment newInstance() {
         return new MapFragment();
@@ -28,7 +29,7 @@ public class MapFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(MapViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         // TODO: Use the ViewModel
     }
 
